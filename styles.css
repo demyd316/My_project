@@ -1,0 +1,310 @@
+﻿.dark /* dark mode - applies white text to all elements unless element has a "dark" class which overrides this */
+{
+	color: #FFFFFF;
+}
+
+body
+{
+	font-family: 'Open Sans', sans-serif;
+}
+
+body.dark
+{
+	background-color: #1C1C1C;
+}
+
+h1,h2
+{
+	text-align: center;
+}
+
+img.logo
+{
+	height: 150px;
+}
+
+img.hidden
+{
+	display: none;
+}
+
+div.tabs
+{
+	margin: auto;
+}
+
+div.tab
+{
+	display: inline-block;
+	color: #000000;
+	background-color: #71C9F8;
+	border-radius: 5px 5px 0px 0px;
+	margin-top: 5px;
+	padding: 10px;
+	user-select: none;
+	transition: all 200ms ease-in-out;
+}
+
+div.tab.dark
+{
+	background-color: #444444;
+	color: #FFFFFF;
+}
+
+div.tab.active
+{
+	color: #FFFFFF;
+	background-color: #1DA1F2;
+	border-top: 3px solid #188BCE;
+
+}
+
+div.tab.active.dark
+{
+	color: #FFFFFF;
+	background-color: #1DA1F2;
+}
+
+div.tab:hover:not(.active) /* does not change color of active tab on hobver */
+{
+	background-color: #99D8F7;
+	cursor: pointer;
+}
+
+div.tab.dark:hover:not(.active) /* does not change color of active tab on hobver */
+{
+	background-color: #5B5B5B;
+	cursor: pointer;
+}
+
+div.tab_content
+{
+	border: solid;
+	border-width: 2px;
+	border-color: #1DA1F2;
+	border-radius: 0px 7px 7px 7px;
+	background-color: #E6ECF0;
+	padding: 10px;
+}
+
+div.tab_content.dark
+{
+	background-color: #2A2A2E;
+}
+
+/* it's necessary to have separate inactive class because all tab_content needs to load on initial page load 
+for a brief period of time so that width is set properly */
+div.tab_content.inactive 
+{
+	display: none;
+}
+
+div.tab_content.active
+{
+	display: block;
+}
+
+div.tab_grid_layout
+{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding: 20px;
+	min-height: 100px;
+}
+
+div.tab_section
+{
+	margin: 10px;
+	background-color: #D7DCE0;
+	border-radius: 15px;
+	display: grid;
+	min-height: 300px;
+	text-align: center;
+}
+.chart_new{
+	display: none !important;
+}
+.table_style{
+	width: 70%;
+	margin: auto;
+}
+div.tab_section.dark
+{
+	background-color: #333333;
+}
+
+div.chart
+{
+	height: 300px;
+	max-width: 750px;
+	margin: 30px;
+	padding: 10px;
+}
+
+#dark_mode_container
+{
+	float: right;
+	display: flex;
+	justify-content: space-evenly;
+	width: 150px;
+}
+
+div.toggle_button
+{
+	width: 40px;
+	height: 20px;
+	background: grey;
+	border-radius: 30px;
+	padding: 5px;
+	transition: all 150ms ease-in-out;
+	margin: auto;
+}
+
+div.toggle_button > div.toggle_button_circle
+{
+	width: 20px;
+	height: 20px;
+	background: #FFFFFF;
+	border-radius: 50%;
+	transition: all 150ms ease-in-out;
+}
+
+div.toggle_button.active
+{
+	background: #00ACEE;
+}
+
+div.toggle_button.active > div.toggle_button_circle
+{
+	margin-left: 20px;
+}
+
+table
+{
+	border-collapse: collapse;
+	transition: all 200ms ease-in-out;
+}
+
+th 
+{
+	text-align: center;
+	font-size: large;
+	user-select: none;
+	padding: 15px;
+}
+
+th:first-child
+{
+	text-align: left;
+}
+
+span.header_sort.active_asc::after
+{
+	content: " \25B2";
+}
+
+span.header_sort.active_desc::after
+{
+	content: " \25BC";
+}
+
+span.header_sort:hover
+{
+	color: grey;
+	cursor: pointer;
+}
+
+tr.dark:nth-child(even)
+{
+	background-color: #444444;
+}
+
+tr:nth-child(even)
+{
+	background-color: #CDD2D6;
+}
+
+tr:hover:not(:first-child)
+{
+	background-color: #C0D2D6;
+	cursor: pointer;
+}
+
+tr.dark:hover:not(:first-child)
+{
+	background-color: #4F4F4F;
+}
+
+td
+{
+	text-align: center;
+	padding: 15px;
+	border-top: 1px solid;
+	border-color: #BBBEC1;
+	font-weight: lighter;
+}
+
+td:first-child
+{
+	text-align: left;
+}
+
+td:not(:last-child)
+{
+	border-right: 1px solid;
+	border-color: #BBBEC1;
+}
+
+td.increase
+{
+	color: green;
+}
+
+td.decrease
+{
+	color: red;
+}
+
+span.decrease
+{
+	color: red;
+}
+
+span.increase
+{
+	color: green;
+}
+
+td:nth-child(1) { width: 25%; }
+td:nth-child(2) { width: 15%; }
+td:nth-child(3) { width: 15%; }
+td:nth-child(4) { width: 15%; }
+td:nth-child(5) { width: 15%; }
+td:nth-child(6) { width: 15%; }
+
+div.table_label_groups
+{
+	display: grid;
+	grid-template-columns: 25% 15% 15% 15% 15% 15%;
+}
+
+div.table_label_group
+{
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-top: 10px;
+}
+
+div.table_label_group_line
+{
+	height: 30px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-radius: 10px 10px 0 0;
+}
+
+div.table_label_group_line.dark
+{
+	border-color: #FFFFFF;
+}

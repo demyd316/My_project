@@ -1,0 +1,1886 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<style type="text/css">
+	@media only screen and (max-width: 700px) {
+	  #table_label_group_p{
+			width:85px;
+		}
+	}
+	.canvasjs-chart-canvas{
+		width:100%;
+		height:300px;
+	}
+</style>
+</head>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	backgroundColor: "#D7DCE0",
+	animationEnabled: true,
+	
+	title:{
+		//text:"Sample Bar Chart"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		//interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		//title: "Number of Companies"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 13, label: "Sweden" },
+			{ y: 72, label: "Taiwan" },
+			{ y: 53, label: "Russia" },
+			{ y: 95, label: "Spain" },
+			{ y: 76, label: "Brazil" },
+			{ y: 77, label: "India" },
+			{ y: 98, label: "Italy" },
+			{ y: 89, label: "Australia" },
+			{ y: 161, label: "Canada" },
+			{ y: 155, label: "South Korea" },
+			{ y: 132, label: "Netherlands" },
+			{ y: 125, label: "Switzerland" },
+			{ y: 215, label: "Britain" },
+			{ y: 238, label: "Germany" },
+			{ y: 259, label: "France" },
+			{ y: 582, label: "Japan" },
+			{ y: 1003, label: "China" },
+			{ y: 1304, label: "US" }
+		]
+	}]
+});
+chart.render();
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	backgroundColor: "#D7DCE0",
+	animationEnabled: true,
+	
+	title:{
+		//text:"Sample Bar Chart"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		//interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		//title: "Number of Companies"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 3, label: "Sweden" },
+			{ y: 7, label: "Taiwan" },
+			{ y: 5, label: "Russia" },
+			{ y: 9, label: "Spain" },
+			{ y: 7, label: "Brazil" },
+			{ y: 7, label: "India" },
+			{ y: 9, label: "Italy" },
+			{ y: 8, label: "Australia" },
+			{ y: 11, label: "Canada" },
+			{ y: 15, label: "South Korea" },
+			{ y: 12, label: "Netherlands" },
+			{ y: 15, label: "Switzerland" },
+			{ y: 25, label: "Britain" },
+			{ y: 28, label: "Germany" },
+			{ y: 29, label: "France" },
+			{ y: 52, label: "Japan" },
+			{ y: 103, label: "China" },
+			{ y: 134, label: "US" }
+		]
+	}]
+});
+chart2.render();
+
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	backgroundColor: "#D7DCE0",
+	animationEnabled: true,
+	
+	title:{
+		//text:"Sample Bar Chart"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		//interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		//title: "Number of Companies"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: 13, label: "Sweden" },
+			{ y: 71, label: "Taiwan" },
+			{ y: 56, label: "Russia" },
+			{ y: 9, label: "Spain" },
+			{ y: 7, label: "Brazil" },
+			{ y: 7, label: "India" },
+			{ y: 9, label: "Italy" },
+			{ y: 87, label: "Australia" },
+			{ y: 181, label: "Canada" },
+			{ y: 195, label: "South Korea" },
+			{ y: 102, label: "Netherlands" },
+			{ y: 153, label: "Switzerland" },
+			{ y: 254, label: "Britain" },
+			{ y: 28, label: "Germany" },
+			{ y: 29, label: "France" },
+			{ y: 562, label: "Japan" },
+			{ y: 1703, label: "China" },
+			{ y: 1384, label: "US" }
+		]
+	}]
+});
+chart3.render();
+
+var chart_GoRenter_Test_IE = new CanvasJS.Chart("chartContainer_GoRenter_Test_IE", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "GoRenter-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 82143.68},
+			{ x: new Date(2017,9,1), y: 66172.59},
+			{ x: new Date(2017,10,1), y: 56457.38},
+			{ x: new Date(2017,11,1), y: 56485.95},
+			{ x: new Date(2017,12,1), y: 144442.13},
+			{ x: new Date(2018,1,1), y: 165079.97},
+			{ x: new Date(2018,2,1), y: 93297.3},
+			{ x: new Date(2018,3,1), y: 74398.55},
+			{ x: new Date(2018,4,1), y: 62813.99},
+			{ x: new Date(2018,5,1), y: 64894.73},
+			{ x: new Date(2018,6,1), y: 81080.67},
+			{ x: new Date(2018,7,1), y: 84925.89},
+			{ x: new Date(2018,8,1), y: 117445.63},
+			{ x: new Date(2018,9,1), y: 91855.85},
+			{ x: new Date(2018,10,1), y: 94436.67},
+			{ x: new Date(2018,11,1), y: 82144.34},
+			{ x: new Date(2018,12,1), y: 107192.11},
+			{ x: new Date(2019,1,1), y: 153109.26},
+			{ x: new Date(2019,2,1), y: 119762.27},
+			{ x: new Date(2019,3,1), y: 63905.26},
+			{ x: new Date(2019,4,1), y: 112195.3},
+			{ x: new Date(2019,5,1), y: 110894.78},
+			{ x: new Date(2019,6,1), y: 109627.22},
+			{ x: new Date(2019,7,1), y: 132601.52},
+			{ x: new Date(2019,8,1), y: 164956.16},
+			{ x: new Date(2019,9,1), y: 94670.15},
+			{ x: new Date(2019,10,1), y: 124712.73},
+			{ x: new Date(2019,11,1), y: 109039.53},
+			{ x: new Date(2019,12,1), y: 91129},
+			{ x: new Date(2020,1,1), y: 158157},
+			{ x: new Date(2020,2,1), y: 99807.56},
+			{ x: new Date(2020,3,1), y: 121873.89},
+			{ x: new Date(2020,4,1), y: 64502.85},
+			{ x: new Date(2020,5,1), y: 116670.3},
+			{ x: new Date(2020,6,1), y: 93614.46},
+			{ x: new Date(2020,7,1), y: 0}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 86136.59},
+			{ x: new Date(2017,9,1), y: 110780.9},
+			{ x: new Date(2017,10,1), y: 96336.90999999999},
+			{ x: new Date(2017,11,1), y: 98058.81999999999},
+			{ x: new Date(2017,12,1), y: 355195.43},
+			{ x: new Date(2018,1,1), y: 110385.44},
+			{ x: new Date(2018,2,1), y: 137342.11},
+			{ x: new Date(2018,3,1), y: 106467.44},
+			{ x: new Date(2018,4,1), y: 86207.12},
+			{ x: new Date(2018,5,1), y: 79385.97},
+			{ x: new Date(2018,6,1), y: 97040.94},
+			{ x: new Date(2018,7,1), y: 68099.39},
+			{ x: new Date(2018,8,1), y: 93894.83},
+			{ x: new Date(2018,9,1), y: 72283.65},
+			{ x: new Date(2018,10,1), y: 88033.09},
+			{ x: new Date(2018,11,1), y: 93065.75},
+			{ x: new Date(2018,12,1), y: 361097.32},
+			{ x: new Date(2019,1,1), y: 84869.48999999999},
+			{ x: new Date(2019,2,1), y: 104086.27},
+			{ x: new Date(2019,3,1), y: 112108.53},
+			{ x: new Date(2019,4,1), y: 100529.13},
+			{ x: new Date(2019,5,1), y: 103146.36},
+			{ x: new Date(2019,6,1), y: 104735.25},
+			{ x: new Date(2019,7,1), y: 111825.92},
+			{ x: new Date(2019,8,1), y: 157661.57},
+			{ x: new Date(2019,9,1), y: 87580.26},
+			{ x: new Date(2019,10,1), y: 101360.37000000001},
+			{ x: new Date(2019,11,1), y: 99799.83},
+			{ x: new Date(2019,12,1), y: 90983.64},
+			{ x: new Date(2020,1,1), y: 117760.41},
+			{ x: new Date(2020,2,1), y: 73986.13},
+			{ x: new Date(2020,3,1), y: 99983.48},
+			{ x: new Date(2020,4,1), y: 71888.42},
+			{ x: new Date(2020,5,1), y: -28186.87},
+			{ x: new Date(2020,6,1), y: 75697.37},
+			{ x: new Date(2020,7,1), y: 31.08}
+		]
+	}]
+});
+chart_GoRenter_Test_IE.render()
+
+var chart_GoRenter_Test_IE = new CanvasJS.Chart("chartContainer_GoRenter_Test_IE1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "GoRenter-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 82143.68},
+			{ x: new Date(2017,9,1), y: 66172.59},
+			{ x: new Date(2017,10,1), y: 56457.38},
+			{ x: new Date(2017,11,1), y: 56485.95},
+			{ x: new Date(2017,12,1), y: 144442.13},
+			{ x: new Date(2018,1,1), y: 165079.97},
+			{ x: new Date(2018,2,1), y: 93297.3},
+			{ x: new Date(2018,3,1), y: 74398.55},
+			{ x: new Date(2018,4,1), y: 62813.99},
+			{ x: new Date(2018,5,1), y: 64894.73},
+			{ x: new Date(2018,6,1), y: 81080.67},
+			{ x: new Date(2018,7,1), y: 84925.89},
+			{ x: new Date(2018,8,1), y: 117445.63},
+			{ x: new Date(2018,9,1), y: 91855.85},
+			{ x: new Date(2018,10,1), y: 94436.67},
+			{ x: new Date(2018,11,1), y: 82144.34},
+			{ x: new Date(2018,12,1), y: 107192.11},
+			{ x: new Date(2019,1,1), y: 153109.26},
+			{ x: new Date(2019,2,1), y: 119762.27},
+			{ x: new Date(2019,3,1), y: 63905.26},
+			{ x: new Date(2019,4,1), y: 112195.3},
+			{ x: new Date(2019,5,1), y: 110894.78},
+			{ x: new Date(2019,6,1), y: 109627.22},
+			{ x: new Date(2019,7,1), y: 132601.52},
+			{ x: new Date(2019,8,1), y: 164956.16},
+			{ x: new Date(2019,9,1), y: 94670.15},
+			{ x: new Date(2019,10,1), y: 124712.73},
+			{ x: new Date(2019,11,1), y: 109039.53},
+			{ x: new Date(2019,12,1), y: 91129},
+			{ x: new Date(2020,1,1), y: 158157},
+			{ x: new Date(2020,2,1), y: 99807.56},
+			{ x: new Date(2020,3,1), y: 121873.89},
+			{ x: new Date(2020,4,1), y: 64502.85},
+			{ x: new Date(2020,5,1), y: 116670.3},
+			{ x: new Date(2020,6,1), y: 93614.46},
+			{ x: new Date(2020,7,1), y: 0}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 86136.59},
+			{ x: new Date(2017,9,1), y: 110780.9},
+			{ x: new Date(2017,10,1), y: 96336.90999999999},
+			{ x: new Date(2017,11,1), y: 98058.81999999999},
+			{ x: new Date(2017,12,1), y: 355195.43},
+			{ x: new Date(2018,1,1), y: 110385.44},
+			{ x: new Date(2018,2,1), y: 137342.11},
+			{ x: new Date(2018,3,1), y: 106467.44},
+			{ x: new Date(2018,4,1), y: 86207.12},
+			{ x: new Date(2018,5,1), y: 79385.97},
+			{ x: new Date(2018,6,1), y: 97040.94},
+			{ x: new Date(2018,7,1), y: 68099.39},
+			{ x: new Date(2018,8,1), y: 93894.83},
+			{ x: new Date(2018,9,1), y: 72283.65},
+			{ x: new Date(2018,10,1), y: 88033.09},
+			{ x: new Date(2018,11,1), y: 93065.75},
+			{ x: new Date(2018,12,1), y: 361097.32},
+			{ x: new Date(2019,1,1), y: 84869.48999999999},
+			{ x: new Date(2019,2,1), y: 104086.27},
+			{ x: new Date(2019,3,1), y: 112108.53},
+			{ x: new Date(2019,4,1), y: 100529.13},
+			{ x: new Date(2019,5,1), y: 103146.36},
+			{ x: new Date(2019,6,1), y: 104735.25},
+			{ x: new Date(2019,7,1), y: 111825.92},
+			{ x: new Date(2019,8,1), y: 157661.57},
+			{ x: new Date(2019,9,1), y: 87580.26},
+			{ x: new Date(2019,10,1), y: 101360.37000000001},
+			{ x: new Date(2019,11,1), y: 99799.83},
+			{ x: new Date(2019,12,1), y: 90983.64},
+			{ x: new Date(2020,1,1), y: 117760.41},
+			{ x: new Date(2020,2,1), y: 73986.13},
+			{ x: new Date(2020,3,1), y: 99983.48},
+			{ x: new Date(2020,4,1), y: 71888.42},
+			{ x: new Date(2020,5,1), y: -28186.87},
+			{ x: new Date(2020,6,1), y: 75697.37},
+			{ x: new Date(2020,7,1), y: 31.08}
+		]
+	}]
+});
+
+chart_GoRenter_Test_IE.render();
+
+var chart_rmle_test_IE = new CanvasJS.Chart("chartContainer_rmle_test_IE", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "rmle-test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 375274.31},
+			{ x: new Date(2017,9,1), y: 422150.12},
+			{ x: new Date(2017,10,1), y: 450010.68},
+			{ x: new Date(2017,11,1), y: 453507.36},
+			{ x: new Date(2017,12,1), y: 536033.28},
+			{ x: new Date(2018,1,1), y: 297359.39},
+			{ x: new Date(2018,2,1), y: 357644.54},
+			{ x: new Date(2018,3,1), y: 325066.96},
+			{ x: new Date(2018,4,1), y: 176860.83},
+			{ x: new Date(2018,5,1), y: 369106.27},
+			{ x: new Date(2018,6,1), y: 431892.63},
+			{ x: new Date(2018,7,1), y: 195794.46},
+			{ x: new Date(2018,8,1), y: 456883.35},
+			{ x: new Date(2018,9,1), y: 407306.97},
+			{ x: new Date(2018,10,1), y: 409912.58},
+			{ x: new Date(2018,11,1), y: 189124.56},
+			{ x: new Date(2018,12,1), y: 522290.7},
+			{ x: new Date(2019,1,1), y: 279793.4},
+			{ x: new Date(2019,2,1), y: 200890.93},
+			{ x: new Date(2019,3,1), y: 467930.84},
+			{ x: new Date(2019,4,1), y: 202792.62},
+			{ x: new Date(2019,5,1), y: 329997.09},
+			{ x: new Date(2019,6,1), y: 456260.57},
+			{ x: new Date(2019,7,1), y: 512761.11},
+			{ x: new Date(2019,8,1), y: 281186.8},
+			{ x: new Date(2019,9,1), y: 313366.53},
+			{ x: new Date(2019,10,1), y: 431620.61},
+			{ x: new Date(2019,11,1), y: 417301.07},
+			{ x: new Date(2019,12,1), y: 504742.48},
+			{ x: new Date(2020,1,1), y: 203679.66},
+			{ x: new Date(2020,2,1), y: 279843.87},
+			{ x: new Date(2020,3,1), y: 554912.07},
+			{ x: new Date(2020,4,1), y: 138326.01},
+			{ x: new Date(2020,5,1), y: 235313.13},
+			{ x: new Date(2020,6,1), y: 265408.79},
+			{ x: new Date(2020,7,1), y: 105948.73}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 434321.08},
+			{ x: new Date(2017,9,1), y: 483598.09},
+			{ x: new Date(2017,10,1), y: 416382.99},
+			{ x: new Date(2017,11,1), y: 497948.23},
+			{ x: new Date(2017,12,1), y: 781167.26},
+			{ x: new Date(2018,1,1), y: 302874.16000000003},
+			{ x: new Date(2018,2,1), y: 392483.42},
+			{ x: new Date(2018,3,1), y: 392930.36},
+			{ x: new Date(2018,4,1), y: 247910.81},
+			{ x: new Date(2018,5,1), y: 449393.47},
+			{ x: new Date(2018,6,1), y: 370781.68000000005},
+			{ x: new Date(2018,7,1), y: 276866.51},
+			{ x: new Date(2018,8,1), y: 476086.93},
+			{ x: new Date(2018,9,1), y: 401459.85},
+			{ x: new Date(2018,10,1), y: 336778.74},
+			{ x: new Date(2018,11,1), y: 359098.91000000003},
+			{ x: new Date(2018,12,1), y: 534684.14},
+			{ x: new Date(2019,1,1), y: 278160.55},
+			{ x: new Date(2019,2,1), y: 317431.42},
+			{ x: new Date(2019,3,1), y: 397199.13},
+			{ x: new Date(2019,4,1), y: 153098.32},
+			{ x: new Date(2019,5,1), y: 474852.95},
+			{ x: new Date(2019,6,1), y: 431107.86},
+			{ x: new Date(2019,7,1), y: 390991.8},
+			{ x: new Date(2019,8,1), y: 373548.58},
+			{ x: new Date(2019,9,1), y: 371005.56},
+			{ x: new Date(2019,10,1), y: 377953.16000000003},
+			{ x: new Date(2019,11,1), y: 329327.66000000003},
+			{ x: new Date(2019,12,1), y: 381899.05000000005},
+			{ x: new Date(2020,1,1), y: 329226.11},
+			{ x: new Date(2020,2,1), y: 335120.47},
+			{ x: new Date(2020,3,1), y: 452249.76},
+			{ x: new Date(2020,4,1), y: 187824.59},
+			{ x: new Date(2020,5,1), y: 100664.33000000002},
+			{ x: new Date(2020,6,1), y: 275298.63},
+			{ x: new Date(2020,7,1), y: 134099.49}
+		]
+	}]
+});
+chart_rmle_test_IE.render();
+
+var chart_rmle_test_IE = new CanvasJS.Chart("chartContainer_rmle_test_IE1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "rmle-test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 375274.31},
+			{ x: new Date(2017,9,1), y: 422150.12},
+			{ x: new Date(2017,10,1), y: 450010.68},
+			{ x: new Date(2017,11,1), y: 453507.36},
+			{ x: new Date(2017,12,1), y: 536033.28},
+			{ x: new Date(2018,1,1), y: 297359.39},
+			{ x: new Date(2018,2,1), y: 357644.54},
+			{ x: new Date(2018,3,1), y: 325066.96},
+			{ x: new Date(2018,4,1), y: 176860.83},
+			{ x: new Date(2018,5,1), y: 369106.27},
+			{ x: new Date(2018,6,1), y: 431892.63},
+			{ x: new Date(2018,7,1), y: 195794.46},
+			{ x: new Date(2018,8,1), y: 456883.35},
+			{ x: new Date(2018,9,1), y: 407306.97},
+			{ x: new Date(2018,10,1), y: 409912.58},
+			{ x: new Date(2018,11,1), y: 189124.56},
+			{ x: new Date(2018,12,1), y: 522290.7},
+			{ x: new Date(2019,1,1), y: 279793.4},
+			{ x: new Date(2019,2,1), y: 200890.93},
+			{ x: new Date(2019,3,1), y: 467930.84},
+			{ x: new Date(2019,4,1), y: 202792.62},
+			{ x: new Date(2019,5,1), y: 329997.09},
+			{ x: new Date(2019,6,1), y: 456260.57},
+			{ x: new Date(2019,7,1), y: 512761.11},
+			{ x: new Date(2019,8,1), y: 281186.8},
+			{ x: new Date(2019,9,1), y: 313366.53},
+			{ x: new Date(2019,10,1), y: 431620.61},
+			{ x: new Date(2019,11,1), y: 417301.07},
+			{ x: new Date(2019,12,1), y: 504742.48},
+			{ x: new Date(2020,1,1), y: 203679.66},
+			{ x: new Date(2020,2,1), y: 279843.87},
+			{ x: new Date(2020,3,1), y: 554912.07},
+			{ x: new Date(2020,4,1), y: 138326.01},
+			{ x: new Date(2020,5,1), y: 235313.13},
+			{ x: new Date(2020,6,1), y: 265408.79},
+			{ x: new Date(2020,7,1), y: 105948.73}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 434321.08},
+			{ x: new Date(2017,9,1), y: 483598.09},
+			{ x: new Date(2017,10,1), y: 416382.99},
+			{ x: new Date(2017,11,1), y: 497948.23},
+			{ x: new Date(2017,12,1), y: 781167.26},
+			{ x: new Date(2018,1,1), y: 302874.16000000003},
+			{ x: new Date(2018,2,1), y: 392483.42},
+			{ x: new Date(2018,3,1), y: 392930.36},
+			{ x: new Date(2018,4,1), y: 247910.81},
+			{ x: new Date(2018,5,1), y: 449393.47},
+			{ x: new Date(2018,6,1), y: 370781.68000000005},
+			{ x: new Date(2018,7,1), y: 276866.51},
+			{ x: new Date(2018,8,1), y: 476086.93},
+			{ x: new Date(2018,9,1), y: 401459.85},
+			{ x: new Date(2018,10,1), y: 336778.74},
+			{ x: new Date(2018,11,1), y: 359098.91000000003},
+			{ x: new Date(2018,12,1), y: 534684.14},
+			{ x: new Date(2019,1,1), y: 278160.55},
+			{ x: new Date(2019,2,1), y: 317431.42},
+			{ x: new Date(2019,3,1), y: 397199.13},
+			{ x: new Date(2019,4,1), y: 153098.32},
+			{ x: new Date(2019,5,1), y: 474852.95},
+			{ x: new Date(2019,6,1), y: 431107.86},
+			{ x: new Date(2019,7,1), y: 390991.8},
+			{ x: new Date(2019,8,1), y: 373548.58},
+			{ x: new Date(2019,9,1), y: 371005.56},
+			{ x: new Date(2019,10,1), y: 377953.16000000003},
+			{ x: new Date(2019,11,1), y: 329327.66000000003},
+			{ x: new Date(2019,12,1), y: 381899.05000000005},
+			{ x: new Date(2020,1,1), y: 329226.11},
+			{ x: new Date(2020,2,1), y: 335120.47},
+			{ x: new Date(2020,3,1), y: 452249.76},
+			{ x: new Date(2020,4,1), y: 187824.59},
+			{ x: new Date(2020,5,1), y: 100664.33000000002},
+			{ x: new Date(2020,6,1), y: 275298.63},
+			{ x: new Date(2020,7,1), y: 134099.49}
+		]
+	}]
+});
+chart_rmle_test_IE.render();
+
+var chart_Fulcrum_Test_IE = new CanvasJS.Chart("chartContainer_Fulcrum_Test_IE", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "Fulcrum-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: 0},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: 0},
+			{ x: new Date(2018,8,1), y: 0},
+			{ x: new Date(2018,9,1), y: 10000},
+			{ x: new Date(2018,10,1), y: 111390.98},
+			{ x: new Date(2018,11,1), y: 50464},
+			{ x: new Date(2018,12,1), y: 646541.31},
+			{ x: new Date(2019,1,1), y: 53415.04},
+			{ x: new Date(2019,2,1), y: 44000},
+			{ x: new Date(2019,3,1), y: 0},
+			{ x: new Date(2019,4,1), y: 122500},
+			{ x: new Date(2019,5,1), y: 238934.25},
+			{ x: new Date(2019,6,1), y: 633081},
+			{ x: new Date(2019,7,1), y: 155525},
+			{ x: new Date(2019,8,1), y: 368330.44},
+			{ x: new Date(2019,9,1), y: 398272.39},
+			{ x: new Date(2019,10,1), y: 411424.65},
+			{ x: new Date(2019,11,1), y: 206402.93},
+			{ x: new Date(2019,12,1), y: 704371.38},
+			{ x: new Date(2020,1,1), y: 38642.42},
+			{ x: new Date(2020,2,1), y: 264094.84},
+			{ x: new Date(2020,3,1), y: 552185.33},
+			{ x: new Date(2020,4,1), y: 33881.2},
+			{ x: new Date(2020,5,1), y: 161325.37},
+			{ x: new Date(2020,6,1), y: 244601.72},
+			{ x: new Date(2020,7,1), y: 140720.37}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: 113.99},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: 14071.06},
+			{ x: new Date(2018,8,1), y: 13151.64},
+			{ x: new Date(2018,9,1), y: 33506.06},
+			{ x: new Date(2018,10,1), y: 99126.64},
+			{ x: new Date(2018,11,1), y: 174040.47999999998},
+			{ x: new Date(2018,12,1), y: 178176.41999999998},
+			{ x: new Date(2019,1,1), y: 116421.54000000001},
+			{ x: new Date(2019,2,1), y: 141414.4},
+			{ x: new Date(2019,3,1), y: 184163.47},
+			{ x: new Date(2019,4,1), y: 262365.78},
+			{ x: new Date(2019,5,1), y: 270813.56},
+			{ x: new Date(2019,6,1), y: 245860.66999999998},
+			{ x: new Date(2019,7,1), y: 286300.07999999996},
+			{ x: new Date(2019,8,1), y: 219918.41999999998},
+			{ x: new Date(2019,9,1), y: 219341.26},
+			{ x: new Date(2019,10,1), y: 306183.74},
+			{ x: new Date(2019,11,1), y: 400208.63},
+			{ x: new Date(2019,12,1), y: 380141.20999999996},
+			{ x: new Date(2020,1,1), y: 445149.88},
+			{ x: new Date(2020,2,1), y: 288021.8},
+			{ x: new Date(2020,3,1), y: 195028.04},
+			{ x: new Date(2020,4,1), y: 158440.63},
+			{ x: new Date(2020,5,1), y: 114089.59},
+			{ x: new Date(2020,6,1), y: 13393.160000000003},
+			{ x: new Date(2020,7,1), y: 93270.96}
+		]
+	}]
+});
+chart_Fulcrum_Test_IE.render();
+
+var chart_Fulcrum_Test_IE = new CanvasJS.Chart("chartContainer_Fulcrum_Test_IE1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "Fulcrum-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Income",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: 0},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: 0},
+			{ x: new Date(2018,8,1), y: 0},
+			{ x: new Date(2018,9,1), y: 10000},
+			{ x: new Date(2018,10,1), y: 111390.98},
+			{ x: new Date(2018,11,1), y: 50464},
+			{ x: new Date(2018,12,1), y: 646541.31},
+			{ x: new Date(2019,1,1), y: 53415.04},
+			{ x: new Date(2019,2,1), y: 44000},
+			{ x: new Date(2019,3,1), y: 0},
+			{ x: new Date(2019,4,1), y: 122500},
+			{ x: new Date(2019,5,1), y: 238934.25},
+			{ x: new Date(2019,6,1), y: 633081},
+			{ x: new Date(2019,7,1), y: 155525},
+			{ x: new Date(2019,8,1), y: 368330.44},
+			{ x: new Date(2019,9,1), y: 398272.39},
+			{ x: new Date(2019,10,1), y: 411424.65},
+			{ x: new Date(2019,11,1), y: 206402.93},
+			{ x: new Date(2019,12,1), y: 704371.38},
+			{ x: new Date(2020,1,1), y: 38642.42},
+			{ x: new Date(2020,2,1), y: 264094.84},
+			{ x: new Date(2020,3,1), y: 552185.33},
+			{ x: new Date(2020,4,1), y: 33881.2},
+			{ x: new Date(2020,5,1), y: 161325.37},
+			{ x: new Date(2020,6,1), y: 244601.72},
+			{ x: new Date(2020,7,1), y: 140720.37}
+		]
+	},
+{
+		type:"line",
+		axisYType: "secondary",
+		name: "Expense",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: 113.99},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: 14071.06},
+			{ x: new Date(2018,8,1), y: 13151.64},
+			{ x: new Date(2018,9,1), y: 33506.06},
+			{ x: new Date(2018,10,1), y: 99126.64},
+			{ x: new Date(2018,11,1), y: 174040.47999999998},
+			{ x: new Date(2018,12,1), y: 178176.41999999998},
+			{ x: new Date(2019,1,1), y: 116421.54000000001},
+			{ x: new Date(2019,2,1), y: 141414.4},
+			{ x: new Date(2019,3,1), y: 184163.47},
+			{ x: new Date(2019,4,1), y: 262365.78},
+			{ x: new Date(2019,5,1), y: 270813.56},
+			{ x: new Date(2019,6,1), y: 245860.66999999998},
+			{ x: new Date(2019,7,1), y: 286300.07999999996},
+			{ x: new Date(2019,8,1), y: 219918.41999999998},
+			{ x: new Date(2019,9,1), y: 219341.26},
+			{ x: new Date(2019,10,1), y: 306183.74},
+			{ x: new Date(2019,11,1), y: 400208.63},
+			{ x: new Date(2019,12,1), y: 380141.20999999996},
+			{ x: new Date(2020,1,1), y: 445149.88},
+			{ x: new Date(2020,2,1), y: 288021.8},
+			{ x: new Date(2020,3,1), y: 195028.04},
+			{ x: new Date(2020,4,1), y: 158440.63},
+			{ x: new Date(2020,5,1), y: 114089.59},
+			{ x: new Date(2020,6,1), y: 13393.160000000003},
+			{ x: new Date(2020,7,1), y: 93270.96}
+		]
+	}]
+});
+chart_Fulcrum_Test_IE.render();
+
+var chart_GoRenter_Test_Profit = new CanvasJS.Chart("chartContainer_GoRenter_Test_Profit", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "GoRenter-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: -3992.9100000000035},
+			{ x: new Date(2017,9,1), y: -44608.31},
+			{ x: new Date(2017,10,1), y: -39879.52999999999},
+			{ x: new Date(2017,11,1), y: -41572.869999999995},
+			{ x: new Date(2017,12,1), y: -210753.3},
+			{ x: new Date(2018,1,1), y: 54694.53},
+			{ x: new Date(2018,2,1), y: -44044.80999999998},
+			{ x: new Date(2018,3,1), y: -32068.89},
+			{ x: new Date(2018,4,1), y: -23393.129999999997},
+			{ x: new Date(2018,5,1), y: -14491.239999999998},
+			{ x: new Date(2018,6,1), y: -15960.270000000004},
+			{ x: new Date(2018,7,1), y: 16826.5},
+			{ x: new Date(2018,8,1), y: 23550.800000000003},
+			{ x: new Date(2018,9,1), y: 19572.20000000001},
+			{ x: new Date(2018,10,1), y: 6403.580000000002},
+			{ x: new Date(2018,11,1), y: -10921.410000000003},
+			{ x: new Date(2018,12,1), y: -253905.21000000002},
+			{ x: new Date(2019,1,1), y: 68239.77000000002},
+			{ x: new Date(2019,2,1), y: 15676},
+			{ x: new Date(2019,3,1), y: -48203.27},
+			{ x: new Date(2019,4,1), y: 11666.169999999998},
+			{ x: new Date(2019,5,1), y: 7748.419999999998},
+			{ x: new Date(2019,6,1), y: 4891.970000000001},
+			{ x: new Date(2019,7,1), y: 20775.59999999999},
+			{ x: new Date(2019,8,1), y: 7294.5899999999965},
+			{ x: new Date(2019,9,1), y: 7089.889999999999},
+			{ x: new Date(2019,10,1), y: 23352.359999999986},
+			{ x: new Date(2019,11,1), y: 9239.699999999997},
+			{ x: new Date(2019,12,1), y: 145.36000000000058},
+			{ x: new Date(2020,1,1), y: 40396.59},
+			{ x: new Date(2020,2,1), y: 25821.429999999993},
+			{ x: new Date(2020,3,1), y: 21890.410000000003},
+			{ x: new Date(2020,4,1), y: -7385.57},
+			{ x: new Date(2020,5,1), y: 144857.17},
+			{ x: new Date(2020,6,1), y: 17917.09000000001},
+			{ x: new Date(2020,7,1), y: -31.08}
+		]
+	}]
+});
+chart_GoRenter_Test_Profit.render();
+
+var chart_GoRenter_Test_Profit = new CanvasJS.Chart("chartContainer_GoRenter_Test_Profit1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "GoRenter-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: -3992.9100000000035},
+			{ x: new Date(2017,9,1), y: -44608.31},
+			{ x: new Date(2017,10,1), y: -39879.52999999999},
+			{ x: new Date(2017,11,1), y: -41572.869999999995},
+			{ x: new Date(2017,12,1), y: -210753.3},
+			{ x: new Date(2018,1,1), y: 54694.53},
+			{ x: new Date(2018,2,1), y: -44044.80999999998},
+			{ x: new Date(2018,3,1), y: -32068.89},
+			{ x: new Date(2018,4,1), y: -23393.129999999997},
+			{ x: new Date(2018,5,1), y: -14491.239999999998},
+			{ x: new Date(2018,6,1), y: -15960.270000000004},
+			{ x: new Date(2018,7,1), y: 16826.5},
+			{ x: new Date(2018,8,1), y: 23550.800000000003},
+			{ x: new Date(2018,9,1), y: 19572.20000000001},
+			{ x: new Date(2018,10,1), y: 6403.580000000002},
+			{ x: new Date(2018,11,1), y: -10921.410000000003},
+			{ x: new Date(2018,12,1), y: -253905.21000000002},
+			{ x: new Date(2019,1,1), y: 68239.77000000002},
+			{ x: new Date(2019,2,1), y: 15676},
+			{ x: new Date(2019,3,1), y: -48203.27},
+			{ x: new Date(2019,4,1), y: 11666.169999999998},
+			{ x: new Date(2019,5,1), y: 7748.419999999998},
+			{ x: new Date(2019,6,1), y: 4891.970000000001},
+			{ x: new Date(2019,7,1), y: 20775.59999999999},
+			{ x: new Date(2019,8,1), y: 7294.5899999999965},
+			{ x: new Date(2019,9,1), y: 7089.889999999999},
+			{ x: new Date(2019,10,1), y: 23352.359999999986},
+			{ x: new Date(2019,11,1), y: 9239.699999999997},
+			{ x: new Date(2019,12,1), y: 145.36000000000058},
+			{ x: new Date(2020,1,1), y: 40396.59},
+			{ x: new Date(2020,2,1), y: 25821.429999999993},
+			{ x: new Date(2020,3,1), y: 21890.410000000003},
+			{ x: new Date(2020,4,1), y: -7385.57},
+			{ x: new Date(2020,5,1), y: 144857.17},
+			{ x: new Date(2020,6,1), y: 17917.09000000001},
+			{ x: new Date(2020,7,1), y: -31.08}
+		]
+	}]
+});
+chart_GoRenter_Test_Profit.render();
+
+
+var chart_rmle_test_Profit = new CanvasJS.Chart("chartContainer_rmle_test_Profit", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "rmle-test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: -59046.77000000002},
+			{ x: new Date(2017,9,1), y: -61447.97000000003},
+			{ x: new Date(2017,10,1), y: 33627.69},
+			{ x: new Date(2017,11,1), y: -44440.869999999995},
+			{ x: new Date(2017,12,1), y: -245133.97999999998},
+			{ x: new Date(2018,1,1), y: -5514.770000000019},
+			{ x: new Date(2018,2,1), y: -34838.880000000005},
+			{ x: new Date(2018,3,1), y: -67863.39999999997},
+			{ x: new Date(2018,4,1), y: -71049.98000000001},
+			{ x: new Date(2018,5,1), y: -80287.19999999995},
+			{ x: new Date(2018,6,1), y: 61110.94999999995},
+			{ x: new Date(2018,7,1), y: -81072.05000000002},
+			{ x: new Date(2018,8,1), y: -19203.580000000016},
+			{ x: new Date(2018,9,1), y: 5847.119999999995},
+			{ x: new Date(2018,10,1), y: 73133.84000000003},
+			{ x: new Date(2018,11,1), y: -169974.35000000003},
+			{ x: new Date(2018,12,1), y: -12393.440000000002},
+			{ x: new Date(2019,1,1), y: 1632.850000000035},
+			{ x: new Date(2019,2,1), y: -116540.48999999999},
+			{ x: new Date(2019,3,1), y: 70731.71000000002},
+			{ x: new Date(2019,4,1), y: 49694.29999999999},
+			{ x: new Date(2019,5,1), y: -144855.86},
+			{ x: new Date(2019,6,1), y: 25152.71000000002},
+			{ x: new Date(2019,7,1), y: 121769.31},
+			{ x: new Date(2019,8,1), y: -92361.78000000003},
+			{ x: new Date(2019,9,1), y: -57639.02999999997},
+			{ x: new Date(2019,10,1), y: 53667.44999999995},
+			{ x: new Date(2019,11,1), y: 87973.40999999997},
+			{ x: new Date(2019,12,1), y: 122843.42999999993},
+			{ x: new Date(2020,1,1), y: -125546.44999999998},
+			{ x: new Date(2020,2,1), y: -55276.59999999998},
+			{ x: new Date(2020,3,1), y: 102662.30999999994},
+			{ x: new Date(2020,4,1), y: -49498.57999999999},
+			{ x: new Date(2020,5,1), y: 134648.8},
+			{ x: new Date(2020,6,1), y: -9889.840000000026},
+			{ x: new Date(2020,7,1), y: -28150.759999999995}
+		]
+	}]
+});
+chart_rmle_test_Profit.render();
+
+var chart_rmle_test_Profit = new CanvasJS.Chart("chartContainer_rmle_test_Profit1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "rmle-test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: -59046.77000000002},
+			{ x: new Date(2017,9,1), y: -61447.97000000003},
+			{ x: new Date(2017,10,1), y: 33627.69},
+			{ x: new Date(2017,11,1), y: -44440.869999999995},
+			{ x: new Date(2017,12,1), y: -245133.97999999998},
+			{ x: new Date(2018,1,1), y: -5514.770000000019},
+			{ x: new Date(2018,2,1), y: -34838.880000000005},
+			{ x: new Date(2018,3,1), y: -67863.39999999997},
+			{ x: new Date(2018,4,1), y: -71049.98000000001},
+			{ x: new Date(2018,5,1), y: -80287.19999999995},
+			{ x: new Date(2018,6,1), y: 61110.94999999995},
+			{ x: new Date(2018,7,1), y: -81072.05000000002},
+			{ x: new Date(2018,8,1), y: -19203.580000000016},
+			{ x: new Date(2018,9,1), y: 5847.119999999995},
+			{ x: new Date(2018,10,1), y: 73133.84000000003},
+			{ x: new Date(2018,11,1), y: -169974.35000000003},
+			{ x: new Date(2018,12,1), y: -12393.440000000002},
+			{ x: new Date(2019,1,1), y: 1632.850000000035},
+			{ x: new Date(2019,2,1), y: -116540.48999999999},
+			{ x: new Date(2019,3,1), y: 70731.71000000002},
+			{ x: new Date(2019,4,1), y: 49694.29999999999},
+			{ x: new Date(2019,5,1), y: -144855.86},
+			{ x: new Date(2019,6,1), y: 25152.71000000002},
+			{ x: new Date(2019,7,1), y: 121769.31},
+			{ x: new Date(2019,8,1), y: -92361.78000000003},
+			{ x: new Date(2019,9,1), y: -57639.02999999997},
+			{ x: new Date(2019,10,1), y: 53667.44999999995},
+			{ x: new Date(2019,11,1), y: 87973.40999999997},
+			{ x: new Date(2019,12,1), y: 122843.42999999993},
+			{ x: new Date(2020,1,1), y: -125546.44999999998},
+			{ x: new Date(2020,2,1), y: -55276.59999999998},
+			{ x: new Date(2020,3,1), y: 102662.30999999994},
+			{ x: new Date(2020,4,1), y: -49498.57999999999},
+			{ x: new Date(2020,5,1), y: 134648.8},
+			{ x: new Date(2020,6,1), y: -9889.840000000026},
+			{ x: new Date(2020,7,1), y: -28150.759999999995}
+		]
+	}]
+});
+chart_rmle_test_Profit.render();
+
+var chart_Fulcrum_Test_Profit = new CanvasJS.Chart("chartContainer_Fulcrum_Test_Profit", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "Fulcrum-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: -113.99},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: -14071.06},
+			{ x: new Date(2018,8,1), y: -13151.64},
+			{ x: new Date(2018,9,1), y: -23506.059999999998},
+			{ x: new Date(2018,10,1), y: 12264.339999999997},
+			{ x: new Date(2018,11,1), y: -123576.47999999998},
+			{ x: new Date(2018,12,1), y: 468364.8900000001},
+			{ x: new Date(2019,1,1), y: -63006.50000000001},
+			{ x: new Date(2019,2,1), y: -97414.4},
+			{ x: new Date(2019,3,1), y: -184163.47},
+			{ x: new Date(2019,4,1), y: -139865.78000000003},
+			{ x: new Date(2019,5,1), y: -31879.309999999998},
+			{ x: new Date(2019,6,1), y: 387220.33},
+			{ x: new Date(2019,7,1), y: -130775.07999999996},
+			{ x: new Date(2019,8,1), y: 148412.02000000002},
+			{ x: new Date(2019,9,1), y: 178931.13},
+			{ x: new Date(2019,10,1), y: 105240.91000000003},
+			{ x: new Date(2019,11,1), y: -193805.7},
+			{ x: new Date(2019,12,1), y: 324230.17000000004},
+			{ x: new Date(2020,1,1), y: -406507.46},
+			{ x: new Date(2020,2,1), y: -23926.959999999963},
+			{ x: new Date(2020,3,1), y: 357157.2899999999},
+			{ x: new Date(2020,4,1), y: -124559.43000000001},
+			{ x: new Date(2020,5,1), y: 47235.78},
+			{ x: new Date(2020,6,1), y: 231208.56},
+			{ x: new Date(2020,7,1), y: 47449.40999999999}
+		]
+	}]
+});
+chart_Fulcrum_Test_Profit.render();
+
+var chart_Fulcrum_Test_Profit = new CanvasJS.Chart("chartContainer_Fulcrum_Test_Profit1", {
+	backgroundColor: "#D7DCE0",
+	title: {
+		//text: "Fulcrum-Test"
+	},
+	axisX: {
+		valueFormatString: "M/YY"
+	},
+	axisY2: {
+		//title: "Value",
+		prefix: "$",
+		suffix: ""
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		verticalAlign: "top",
+		horizontalAlign: "center",
+		dockInsidePlotArea: true,
+		itemclick: toogleDataSeries
+	},
+	data: [{
+		type:"line",
+		axisYType: "secondary",
+		name: "Profit",
+		showInLegend: true,
+		markerSize: 0,
+		yValueFormatString: "$#,###",
+		dataPoints: [
+			{ x: new Date(2017,8,1), y: 0},
+			{ x: new Date(2017,9,1), y: 0},
+			{ x: new Date(2017,10,1), y: 0},
+			{ x: new Date(2017,11,1), y: 0},
+			{ x: new Date(2017,12,1), y: 0},
+			{ x: new Date(2018,1,1), y: -113.99},
+			{ x: new Date(2018,2,1), y: 0},
+			{ x: new Date(2018,3,1), y: 0},
+			{ x: new Date(2018,4,1), y: 0},
+			{ x: new Date(2018,5,1), y: 0},
+			{ x: new Date(2018,6,1), y: 0},
+			{ x: new Date(2018,7,1), y: -14071.06},
+			{ x: new Date(2018,8,1), y: -13151.64},
+			{ x: new Date(2018,9,1), y: -23506.059999999998},
+			{ x: new Date(2018,10,1), y: 12264.339999999997},
+			{ x: new Date(2018,11,1), y: -123576.47999999998},
+			{ x: new Date(2018,12,1), y: 468364.8900000001},
+			{ x: new Date(2019,1,1), y: -63006.50000000001},
+			{ x: new Date(2019,2,1), y: -97414.4},
+			{ x: new Date(2019,3,1), y: -184163.47},
+			{ x: new Date(2019,4,1), y: -139865.78000000003},
+			{ x: new Date(2019,5,1), y: -31879.309999999998},
+			{ x: new Date(2019,6,1), y: 387220.33},
+			{ x: new Date(2019,7,1), y: -130775.07999999996},
+			{ x: new Date(2019,8,1), y: 148412.02000000002},
+			{ x: new Date(2019,9,1), y: 178931.13},
+			{ x: new Date(2019,10,1), y: 105240.91000000003},
+			{ x: new Date(2019,11,1), y: -193805.7},
+			{ x: new Date(2019,12,1), y: 324230.17000000004},
+			{ x: new Date(2020,1,1), y: -406507.46},
+			{ x: new Date(2020,2,1), y: -23926.959999999963},
+			{ x: new Date(2020,3,1), y: 357157.2899999999},
+			{ x: new Date(2020,4,1), y: -124559.43000000001},
+			{ x: new Date(2020,5,1), y: 47235.78},
+			{ x: new Date(2020,6,1), y: 231208.56},
+			{ x: new Date(2020,7,1), y: 47449.40999999999}
+		]
+	}]
+});
+chart_Fulcrum_Test_Profit.render();
+
+function toogleDataSeries(e){
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else{
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+
+initialize();
+
+} //end of window.onload() function
+
+$(document).ready(function(){
+	var assets = $("#assets_value").text();
+	var liability = $("#liability_value").text();
+
+	function get_number(str){
+		var result = "";
+		var i, j = 1;
+		for(i = 1; i < str.length; i ++){
+			if(str[i] == ","){
+				result += str.substring(j, i);
+				j = i;
+			}
+		}
+		result += str.substring(j +1, str.length);
+		return result;
+	}
+	$("#ratio_value").html(Number(get_number(assets))/Number(get_number(liability)));
+	$("#ratio_value_1").html(Number(get_number(assets))/Number(get_number(liability)));
+	$("#ratio_value_2").html(Number(get_number(assets))/Number(get_number(liability)));
+});
+</script>
+</head>
+<body>
+
+<div style="display: inline-block;">
+<img id="logo" class="logo" src="Resources/Qbrownielogo.png">
+<img id="logo_darkmode" class="logo" src="Resources/Qbrownielogo_darkmode.png">
+</div>
+
+<div id="dark_mode_container">
+	<p>Dark Mode</p>
+	<div class="toggle_button" onclick="darkMode(this)">
+		<div class="toggle_button_circle">
+		</div>
+	</div>
+</div>
+
+
+<div class="tabs">
+	<div onclick="switchTabs(this)" class ="tab">Home</div>
+	<div onclick="switchTabs(this)" class="tab">GoRenter-Test</div>
+	<div onclick="switchTabs(this)" class="tab">rmle-test</div>
+	<div onclick="switchTabs(this)" class="tab">fulcrum-test</div>
+</div>
+
+<div class="tab_content_container">
+	<div class="tab_content" id="Home-TabContent">
+	<div class="tab_grid_layout" style="grid-template-columns: 100%; !important"> <!-- 100% width for homepage only -->
+		<div class="tab_section" style="overflow-x:auto;">
+			<h2>Profit Overview</h2>
+			<div class="table_label_groups">
+				<div class="table_label_group" style="grid-column: 2 / span 2;" id="table_label_group_p">
+					<p style="font-size:15px;">Last Month</p>
+					<div class="table_label_group_line"></div>
+				</div>
+				<div class="table_label_group" style="grid-column: 4 / span 4;">
+					<p style="font-size:15px;">Versus</p>
+					<div class="table_label_group_line"></div>
+				</div>
+			</div>
+			<table id="profit_overview" style="margin-bottom:15px; margin-top:15px;">
+			  <tr>
+			   <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+				<th><span class="header_sort" onclick="sortTable(this)">Company</span></th>
+				<th><span class="header_sort" onclick="sortTable(this)">Profit</span></th>
+				<th><span class="header_sort" onclick="sortTable(this)">Profit Margin</span></th>
+				<th><span class="header_sort" onclick="sortTable(this)">Previous Month</span></th>
+				<th><span class="header_sort" onclick="sortTable(this)">Last Year</span></th>
+				<th><span class="header_sort" onclick="sortTable(this)">Average</span><p style="font-size:x-small;">(Profit Margins)</p></th>
+			  </tr>
+			  <tr onclick="switchTabs(this)">
+				<td>GoRenter-Test</td>
+				<td>$17,917</td>
+				<td>24.9%</td>
+				<td class="increase">+17.4%</td>
+				<td class="decrease">-35.7%</td>
+				<td class="increase">+67.8%</td>
+			  </tr>
+			  <tr onclick="switchTabs(this)">
+				<td>rmle-test</td>
+				<td>$102,239</td>
+				<td>7.8%</td>
+				<td class="increase">+11.2%</td>
+				<td class="decrease">-23.9%</td>
+				<td class="decrease">-11.7%</td>
+			  </tr>
+			  <tr onclick="switchTabs(this)">
+				<td>fulcrum-test</td>
+				<td>$65,938</td>
+				<td>12.5%</td>
+				<td class="decrease">-17.6%</td>
+				<td class="decrease">-29.1%</td>
+				<td class="decrease">-79.8%</td>
+			  </tr>
+			</table>
+		</div>
+		<p>*sample data (for now)</p>
+	</div>
+	</div>
+	<div class="tab_content" id="GoRenter-Test-TabContent">
+	<div class="tab_grid_layout">
+		<div class="tab_section">
+			<h2> Solvency </h2>
+			<div class="container">
+				<table class="table table-hover">
+					<tbody>
+					<tr>
+						<td>Assets</td>
+						<td id="assets_value">$200,000</td>
+					</tr>
+					<tr>
+						<td>Liabilities</td>
+						<td id="liability_value">$100,000</td>
+					</tr>
+					<tr>
+						<td>Ratio</td>
+						<td id="ratio_value"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab_section">
+			<h2> Chart of Accounts </h2>
+			<div class="container" style="height:219.594px; overflow-y:scroll;">
+				<table class="table table-hover table_style">
+					<tbody>
+					<tr>
+						<td>Company</td>
+						<td>Account Balance</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="chartContainer" class="chart" style="display:none;"></div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div>
+				<h2 style="text-align: center; "> Income and Expense </h2>
+				<div id="chartContainer_GoRenter_Test_IE" class="chart"></div>
+			</div>
+			<div>
+				<h2 style="text-align: center; "> Profit </h2>
+				<div id="chartContainer_GoRenter_Test_Profit" class="chart"></div>
+			</div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div>
+				<h2 style="text-align: center; "> Other Income </h2>
+				<div id="chartContainer_GoRenter_Test_IE1" class="chart"></div>
+			</div>
+			<div>
+				<h2 style="text-align: center; "> Other Expense </h2>
+				<div id="chartContainer_GoRenter_Test_Profit1" class="chart"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="tab_content" id="rmle-test-TabContent">
+	<div class="tab_grid_layout">
+		<div class="tab_section">
+			<h2> Solvency </h2>
+			<div class="container">
+				<table class="table table-hover">
+					<tbody>
+					<tr>
+						<td>Assets</td>
+						<td id="assets_value">$200,000</td>
+					</tr>
+					<tr>
+						<td>Liabilities</td>
+						<td id="liability_value">$100,000</td>
+					</tr>
+					<tr>
+						<td>Ratio</td>
+						<td id="ratio_value_1"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab_section">
+			<h2> Chart of Accounts </h2>
+			<div class="container" style="height:219.594px; overflow-y:scroll;">
+				<table class="table table-hover table_style">
+					<tbody>
+					<tr>
+						<td>Company</td>
+						<td>Account Balance</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="chartContainer2" class="chart chart_new"></div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div>
+				<h2 style="text-align: center;"> Income and Expense </h2>
+				<div id="chartContainer_rmle_test_IE" class="chart"></div>
+			</div>
+			<div>
+				<h2 style="text-align: center; "> Profit </h2>
+				<div id="chartContainer_rmle_test_Profit" class="chart"></div>
+			</div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div>
+				<h2 style="text-align: center;"> Other Income </h2>
+				<div id="chartContainer_rmle_test_IE1" class="chart"></div>
+			</div>
+			<div>
+				<h2 style="text-align: center; "> Other Expense </h2>
+				<div id="chartContainer_rmle_test_Profit1" class="chart"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="tab_content" id="fulcrum-test-TabContent">
+	<div class="tab_grid_layout">
+		<div class="tab_section">
+			<h2> Solvency </h2>
+			<div class="container">
+				<table class="table table-hover">
+					<tbody>
+					<tr>
+						<td>Assets</td>
+						<td id="assets_value">$200,000</td>
+					</tr>
+					<tr>
+						<td>Liabilities</td>
+						<td id="liability_value">$100,000</td>
+					</tr>
+					<tr>
+						<td>Ratio</td>
+						<td id="ratio_value_2"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tab_section">
+			<h2> Chart of Accounts </h2>
+			<div class="container" style="height:219.594px; overflow-y:scroll;">
+				<table class="table table-hover table_style">
+					<tbody>
+					<tr>
+						<td>Company</td>
+						<td>Account Balance</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					<tr>
+						<td>rmle</td>
+						<td>$15,000 </td>
+					</tr>
+					<tr>
+						<td>GoRenter</td>
+						<td>$200,000</td>
+					</tr>
+					<tr>
+						<td>fulcrum</td>
+						<td>$15,000</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="chartContainer3" class="chart" style="display:none;"></div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div style="grid-template-columns: 50% 50%; grid-column: 1 / span 1; width">
+				<h2> Income and Expense </h2>
+				<div id="chartContainer_Fulcrum_Test_IE" class="chart"></div>
+			</div>
+			<div style="grid-template-columns: 50% 50%; grid-column: 2 / span 2;">
+				<h2 style="text-align: center; "> Profit </h2>
+				<div id="chartContainer_Fulcrum_Test_Profit" class="chart"></div>
+			</div>
+		</div>
+		<div class="tab_section" style="grid-template-columns: 50% 50%; grid-column: 1 / span 2;">
+			<div style="grid-column: 1 / span 1;">
+				<h2> Other Income </h2>
+				<div id="chartContainer_Fulcrum_Test_IE1" class="chart"></div>
+			</div>
+			<div style="grid-column: 2 / span 1;">
+				<h2 style="text-align: center; ">Other Expense </h2>
+				<div id="chartContainer_Fulcrum_Test_Profit1" class="chart"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+
+<span style="margin:auto;">(C) Copyright QBrownie 2020 (Not Really)</span>
+<script src="Resources/canvasjs.min.js"></script> <!-- canvasJS script - once we get rid of CanvasJS this line can be deleted -->
+ <!-- canvasJS script - once we get rid of CanvasJS this line can be deleted -->
+<script>
+function initialize()
+{
+	//the following function sets all tabs to not display only AFTER they have loaded onto the screen
+	//this allows the display to render properly
+	var i;
+
+	//this inactivates all tab content once it has loaded and the width has been properly calcualted by the browser
+	var tab_contents = document.getElementsByClassName("tab_content");
+	for (i = 0; i < tab_contents.length; i++)
+	{
+		tab_contents[i].classList.add("inactive");
+	}
+
+	//this activates the first tab
+	var tabs = document.getElementsByClassName("tab");
+	for (i = 0; i < tabs.length; i++)
+	{
+		if(i == 0) 
+		{
+			tabs[i].classList.add("active");
+			document.getElementById(tabs[i].innerHTML + "-TabContent").classList.add("active");
+		}
+	}
+
+	document.getElementById("logo_darkmode").classList.toggle("hidden"); //hides darkmode logo
+}
+
+function switchTabs(element)
+{
+	var i;
+
+	var tab; //will be set, this is the element that is the tab being clicked
+
+	if(element.classList.contains("tab")) //tab element being referred to is the passed in element
+	{
+		tab = element;
+	}
+	else if(element.nodeName == "TR") //need to find the tab element that is being referred to
+	{
+		var tab_name = element.getElementsByTagName("td")[0].innerHTML; //get tab_name from innerHTML
+		var tabs = document.getElementsByClassName("tab"); //sort through tabs and find corresponding tab element
+		for(i=0;i<tabs.length;i++)
+		{
+			if(tabs[i].innerHTML == tab_name)
+			{
+				tab = tabs[i]; //sets tab element
+			}
+		}
+	}
+
+	//removes active class from all tabs
+	var tabs = document.getElementsByClassName("tab");
+	for(i=0;i<tabs.length;i++)
+	{
+		tabs[i].classList.remove("active")
+		if(tabs[i].innerHTML == tab_name)
+		{
+			tab = tabs[i]; //sets tab element
+		}
+	}
+
+	//removes active class from all tab_contents
+	var tab_contents = document.getElementsByClassName("tab_content");
+	for (i = 0; i < tab_contents.length; i++)
+	{
+		tab_contents[i].classList.remove("active");
+		tab_contents[i].classList.add("inactive");
+	}
+
+	
+	tab.classList.add("active"); //activates clicked tab
+	document.getElementById(tab.innerHTML + "-TabContent").classList.add("active"); //finds and activates associated tab_content
+}
+
+function darkMode(tog)
+{
+	tog.classList.toggle('active');
+		
+	var i;
+	var elements = document.getElementsByTagName("*");
+	for (i = 0; i < elements.length; i++)
+	{
+		elements[i].classList.toggle('dark');
+	}
+	
+	document.getElementById("logo").classList.toggle("hidden");
+	document.getElementById("logo_darkmode").classList.toggle("hidden");
+	
+}
+
+function sortTable(element) 
+{ 
+	var table = element.parentElement.parentElement.parentElement;
+	var rows = table.rows;
+	var i;
+	
+	//the following finds out what column number called the sort
+	var columns = rows[0].getElementsByTagName("th");
+	var n;
+	var dir
+
+	console.log(columns.length);
+
+	for(i=0;i<columns.length;i++)
+	{
+		if(columns[i] == element.parentElement)
+		{
+			n = i;
+			if(columns[i].getElementsByTagName("span")[0].classList.contains("active_asc")) { dir = "desc"; }
+			else if(columns[i].getElementsByTagName("span")[0].classList.contains("active_desc")) { dir = "asc"; }
+			else { dir = "desc"; }
+		}
+		columns[i].getElementsByTagName("span")[0].classList.remove("active_asc");
+		columns[i].getElementsByTagName("span")[0].classList.remove("active_desc");
+	}
+	
+	var x, y, shouldSwitch, switchcount = 0;
+
+	var switching = true;
+
+	while (switching) 
+	{
+		switching = false;
+		for (i = 1; i < (rows.length - 1); i++) 
+		{
+			x = rows[i].getElementsByTagName("td")[n];
+			y = rows[i + 1].getElementsByTagName("td")[n];
+			shouldSwitch = false;
+			if (dir == "asc") 
+			{
+				if(n==0) //if sorting by company name
+				{
+					if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+					{
+						shouldSwitch= true;
+						break;
+					}
+				}
+				else
+				{
+					if (Number(parseFloat(x.innerHTML.replace(/[^\d\.\-]/, ''))) > Number(parseFloat(y.innerHTML.replace(/[^\d\.\-]/, '')))) 
+					{
+						shouldSwitch= true;
+						break;
+					}
+				}
+			} 
+			else if (dir == "desc") 
+			{
+				if(n==0) //if sorting by company name
+				{
+					if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+					{
+						shouldSwitch= true;
+						break;
+					}
+				}
+				else
+				{
+					if (Number(parseFloat(x.innerHTML.replace(/[^\d\.\-]/, ''))) < Number(parseFloat(y.innerHTML.replace(/[^\d\.\-]/, ''))))
+					{
+						shouldSwitch = true;
+						break;
+					}
+				}
+			}
+		}
+		if (shouldSwitch) 
+		{
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+			switchcount ++;      
+		} 
+	}
+
+	if(dir == "asc")
+	{
+		element.classList.add("active_asc");
+	}
+	else if(dir == "desc")
+	{
+		element.classList.add("active_desc");
+	}
+}
+</script>
+</body>
+</html>
